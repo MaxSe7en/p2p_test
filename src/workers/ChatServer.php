@@ -115,7 +115,7 @@ class ChatServer implements MessageComponentInterface {
         // Persist message to DB
         try {
             $db = DB::connect();
-            $stmt = $db->prepare("INSERT INTO messages (trade_id, sender_id, message) VALUES (?, ?, ?)");
+            $stmt = $db->prepare("INSERT INTO chat_messages (trade_id, sender_id, message) VALUES (?, ?, ?)");
             $stmt->execute([$tradeId, $senderId, $messageText]);
             $messageId = $db->lastInsertId();
 
