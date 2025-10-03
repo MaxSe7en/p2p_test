@@ -1,20 +1,51 @@
 <?php
 namespace App\Controllers;
 
+use App\Exceptions\Console;
 use App\Models\User;
+use Exception;
 
 class UserController {
     public static function register($data) {
-        $id = User::create($data['username'], $data['password']);
-        return ["message" => "User registered successfully", "id" => $id];
+        try {
+            $id = User::create($data['username'], $data['password']);
+            Console::log2("User registered successfully: ", $id);
+            return [
+                "success" => true,
+                "message" => "User registered successfully",
+                "data" => ["id" => $id]
+            ];
+        } catch (Exception $e) {
+            return [
+                "success" => false,
+                "message" => $e->getMessage(),
+                "data" => null
+            ];
+        }
     }
 
     public static function login($data) {
-        $user = User::verifyLogin($data['username'], $data['password']);
-        if ($user) {
-            // For test simplicity, return user data (no JWT/session here)
-            return ["message" => "Login successful", "user" => $user];
+        try {
+            $user = User::verifyLogin($data['username'], $data['password']);
+            if ($user) {
+                return [
+                    "success" => true,
+                    "message" => "Login successful",
+                    "data" => $user
+                ];
+            }
+            return [
+                "success" => false,
+                "message" => "Invalid credentials",
+                "data" => null
+            ];
+        } catch (Exception $e) {
+            return [
+                "success" => false,
+                "message" => $e->getMessage(),
+                "data" => null
+            ];
         }
-        return ["error" => "Invalid credentials"];
     }
 }
+

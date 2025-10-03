@@ -2,10 +2,11 @@
 namespace App\Models;
 
 use App\Helpers\DB;
+use Exception;
 
 class Trade
 {
-    public static function all()
+    public static function all(): array
     {
         return DB::selectAll("
             SELECT 
@@ -19,7 +20,7 @@ class Trade
         ");
     }
 
-    public static function find($id)
+    public static function find($id): mixed
     {
         return DB::select("
             SELECT 
@@ -33,15 +34,59 @@ class Trade
         ", [$id]);
     }
 
-    public static function create($seller_id, $asset, $amount)
+    // public static function create($seller_id, $asset, $amount)
+    // {
+    //     return DB::insert(
+    //         "INSERT INTO trades (seller_id, asset, amount) VALUES (?, ?, ?)",
+    //         [$seller_id, $asset, $amount]
+    //     );
+    // }
+    public static function create($seller_id, $asset, $amount): bool|string
     {
-        return DB::insert(
-            "INSERT INTO trades (seller_id, asset, amount) VALUES (?, ?, ?)",
-            [$seller_id, $asset, $amount]
+        $db = DB::connect();
+
+        // Check if seller has enough balance
+        $wallet = DB::select(
+            "SELECT * FROM wallets WHERE user_id = ? AND asset = ?",
+            [$seller_id, $asset]
         );
+
+        if (!$wallet || $wallet['balance'] < $amount) {
+            throw new Exception("Insufficient balance");
+        }
+
+        // Begin transaction
+        $db->beginTransaction();
+        try {
+            // Lock the funds
+            DB::update(
+                "UPDATE wallets SET balance = balance - ?, locked_balance = locked_balance + ? 
+             WHERE user_id = ? AND asset = ?",
+                [$amount, $amount, $seller_id, $asset]
+            );
+
+            // Create trade
+            $tradeId = DB::insert(
+                "INSERT INTO trades (seller_id, asset, amount) VALUES (?, ?, ?)",
+                [$seller_id, $asset, $amount]
+            );
+
+            // Log transaction
+            DB::insert(
+                "INSERT INTO transactions (user_id, asset, amount, type, trade_id) 
+             VALUES (?, ?, ?, 'lock', ?)",
+                [$seller_id, $asset, $amount, $tradeId]
+            );
+
+            $db->commit();
+            return $tradeId;
+        } catch (Exception $e) {
+            $db->rollBack();
+            throw $e;
+        }
     }
 
-    public static function buy($tradeId, $buyerId)
+    public static function buy($tradeId, $buyerId): bool
     {
         return DB::update(
             "UPDATE trades SET buyer_id=?, status='in_progress' WHERE id=? AND status='open'",
@@ -49,30 +94,131 @@ class Trade
         );
     }
 
-    public static function release($tradeId, $sellerId)
+    // public static function release($tradeId, $sellerId)
+    // {
+    //     // Only allow release if seller owns the trade and it's in progress
+    //     return DB::update(
+    //         "UPDATE trades SET status='completed' 
+    //      WHERE id=? AND seller_id=? AND status='in_progress'",
+    //         [$tradeId, $sellerId]
+    //     );
+    // }
+
+    public static function release($tradeId, $sellerId): bool
     {
-        // Only allow release if seller owns the trade and it's in progress
-        return DB::update(
-            "UPDATE trades SET status='completed' 
-         WHERE id=? AND seller_id=? AND status='in_progress'",
-            [$tradeId, $sellerId]
-        );
+        $trade = self::find($tradeId);
+
+        if (!$trade || $trade['seller_id'] != $sellerId || $trade['status'] != 'in_progress') {
+            return false;
+        }
+
+        $db = DB::connect();
+        $db->beginTransaction();
+        try {
+            // Unlock seller's funds
+            DB::update(
+                "UPDATE wallets SET locked_balance = locked_balance - ? 
+             WHERE user_id = ? AND asset = ?",
+                [$trade['amount'], $sellerId, $trade['asset']]
+            );
+
+            // Give to buyer
+            DB::update(
+                "UPDATE wallets SET balance = balance + ? 
+             WHERE user_id = ? AND asset = ?",
+                [$trade['amount'], $trade['buyer_id'], $trade['asset']]
+            );
+
+            // Update trade status
+            DB::update("UPDATE trades SET status='completed' WHERE id=?", [$tradeId]);
+
+            // Log transactions
+            DB::insert(
+                "INSERT INTO transactions (user_id, asset, amount, type, trade_id) 
+             VALUES (?, ?, ?, 'release', ?)",
+                [$sellerId, $trade['asset'], $trade['amount'], $tradeId]
+            );
+
+            $db->commit();
+            return true;
+        } catch (Exception $e) {
+            $db->rollBack();
+            throw $e;
+        }
     }
 
-    public static function cancel($tradeId, $userId)
+    public static function cancel($tradeId, $userId): array
     {
-        // Allow cancel if user is seller OR buyer, and status is open or in_progress
-        return DB::update(
-            "UPDATE trades SET status='cancelled' 
-         WHERE id=? 
-         AND (seller_id=? OR buyer_id=?) 
-         AND status IN ('open','in_progress')",
-            [$tradeId, $userId, $userId]
-        );
+        $db = DB::connect();
+        $trade = DB::select("SELECT * FROM trades WHERE id = ?", [$tradeId]);
+
+        if (!$trade) {
+            return [
+                "success" => false,
+                "message" => "Trade not found",
+                "data" => null
+            ];
+        }
+
+        if (!in_array($trade['status'], ['open', 'in_progress'])) {
+            return [
+                "success" => false,
+                "message" => "Trade cannot be cancelled in its current state",
+                "data" => null
+            ];
+        }
+
+        if ($trade['seller_id'] != $userId && $trade['buyer_id'] != $userId) {
+            return [
+                "success" => false,
+                "message" => "You are not authorized to cancel this trade",
+                "data" => null
+            ];
+        }
+
+        $db->beginTransaction();
+        try {
+            // Update trade status
+            DB::update(
+                "UPDATE trades SET status='cancelled' WHERE id=?",
+                [$tradeId]
+            );
+
+            // If seller is cancelling, unlock funds
+            if ($trade['seller_id'] == $userId) {
+                DB::update(
+                    "UPDATE wallets SET balance = balance + ?, locked_balance = locked_balance - ? 
+                 WHERE user_id=? AND asset=?",
+                    [$trade['amount'], $trade['amount'], $userId, $trade['asset']]
+                );
+
+                // Log unlock transaction
+                DB::insert(
+                    "INSERT INTO transactions (user_id, asset, amount, type, trade_id) 
+                 VALUES (?, ?, ?, 'unlock', ?)",
+                    [$userId, $trade['asset'], $trade['amount'], $tradeId]
+                );
+            }
+
+            $db->commit();
+            return [
+                "success" => true,
+                "message" => "Trade cancelled successfully",
+                "data" => ["trade_id" => $tradeId, "cancelled_by" => $userId]
+            ];
+        } catch (Exception $e) {
+            $db->rollBack();
+            return [
+                "success" => false,
+                "message" => $e->getMessage(),
+                "data" => null
+            ];
+        }
     }
 
 
-    public static function updateStatus($id, $status)
+
+    public static function updateStatus($id, $status): bool
     {
         return DB::update(
             "UPDATE trades SET status=? WHERE id=?",
@@ -80,7 +226,7 @@ class Trade
         );
     }
 
-    public static function delete($id)
+    public static function delete($id): bool
     {
         return DB::delete("DELETE FROM trades WHERE id=?", [$id]);
     }
