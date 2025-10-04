@@ -1,6 +1,7 @@
 <?php
 namespace App\Helpers;
 
+use App\Exceptions\Console;
 use PDO;
 
 class DB
@@ -34,6 +35,7 @@ class DB
     public static function selectAll(string $sql, array $params = [])
     {
         $stmt = self::connect()->prepare($sql);
+        // Console::log("Executing SQL: $sql with params: " . json_encode($params));
         $stmt->execute($params);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }

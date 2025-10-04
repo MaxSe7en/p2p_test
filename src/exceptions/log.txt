@@ -1,47 +1,535 @@
-2025-10-03 => 📝[LOG]📝 creating user: alice
-2025-10-03 => 📝[LOG]📝 creating user: alice
-2025-10-03 => 📝[LOG]📝 User registered successfully: 4
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 User found: 4
-2025-10-03 => 📝[LOG]📝 User found: 4
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 User found: 4
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 User found: 4
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 User found: 4
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 User found: 4
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
-2025-10-03 => 📝[LOG]📝 Fetching all trades [{"id":23,"asset":"BTC","amount":"1.00","status":"open","seller_name":"alice","buyer_name":null},{"id":22,"asset":"BTC","amount":"100.00","status":"completed","seller_name":"demo_user","buyer_name":"max_test"},{"id":21,"asset":"BTC","amount":"100.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":20,"asset":"DOT","amount":"300.45","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":19,"asset":"SOL","amount":"20.10","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":18,"asset":"DOGE","amount":"10000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":17,"asset":"BNB","amount":"5.00","status":"open","seller_name":"max_test","buyer_name":null},{"id":16,"asset":"LTC","amount":"15.60","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":15,"asset":"XRP","amount":"2500.30","status":"open","seller_name":"max_test","buyer_name":null},{"id":14,"asset":"ADA","amount":"1000.75","status":"cancelled","seller_name":"max_test","buyer_name":"demo_user"},{"id":13,"asset":"USDT","amount":"5000.00","status":"completed","seller_name":"max_test","buyer_name":"demo_user"},{"id":12,"asset":"ETH","amount":"10.25","status":"in_progress","seller_name":"max_test","buyer_name":"demo_user"},{"id":11,"asset":"BTC","amount":"0.50","status":"open","seller_name":"max_test","buyer_name":null}]
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT id, seller_id, buyer_id, status 
+        FROM trades 
+        WHERE seller_id = ? OR buyer_id = ?
+     with params: ["4","4"]
+2025-10-04 => 📝[LOG]📝 Trades for user 4:
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT trade_id, COUNT(*) as msg_count 
+        FROM chat_messages 
+        GROUP BY trade_id
+     with params: []
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT 
+            t.id, t.asset, t.amount, t.status,
+            t.seller_id, t.buyer_id,
+            s.username AS seller_name,
+            b.username AS buyer_name,
+            CASE 
+                WHEN t.seller_id = ? THEN COALESCE(b.username, 'No Buyer')
+                ELSE s.username
+            END AS counterparty_name,
+            (SELECT COUNT(*) FROM chat_messages WHERE trade_id = t.id) as message_count,
+            (SELECT MAX(created_at) FROM chat_messages WHERE trade_id = t.id) as last_message_at
+        FROM trades t
+        JOIN users s ON t.seller_id = s.id
+        LEFT JOIN users b ON t.buyer_id = b.id
+        WHERE (t.seller_id = ? OR t.buyer_id = ?)
+          AND EXISTS (SELECT 1 FROM chat_messages WHERE trade_id = t.id)
+        ORDER BY last_message_at DESC, t.id DESC
+     with params: ["4","4","4"]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                cm.id,
+                cm.sender_id,
+                cm.message,
+                cm.created_at,
+                u.username as sender_name
+            FROM chat_messages cm
+            JOIN users u ON cm.sender_id = u.id
+            WHERE cm.trade_id = ?
+            ORDER BY cm.created_at ASC
+         with params: ["24"]
+2025-10-04 => 📝[LOG]📝 Fetching trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 3
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT id, seller_id, buyer_id, status 
+        FROM trades 
+        WHERE seller_id = ? OR buyer_id = ?
+     with params: ["3","3"]
+2025-10-04 => 📝[LOG]📝 Trades for user 3:[]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT trade_id, COUNT(*) as msg_count 
+        FROM chat_messages 
+        GROUP BY trade_id
+     with params: []
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:[{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":4}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT 
+            t.id, t.asset, t.amount, t.status,
+            t.seller_id, t.buyer_id,
+            s.username AS seller_name,
+            b.username AS buyer_name,
+            CASE 
+                WHEN t.seller_id = ? THEN COALESCE(b.username, 'No Buyer')
+                ELSE s.username
+            END AS counterparty_name,
+            (SELECT COUNT(*) FROM chat_messages WHERE trade_id = t.id) as message_count,
+            (SELECT MAX(created_at) FROM chat_messages WHERE trade_id = t.id) as last_message_at
+        FROM trades t
+        JOIN users s ON t.seller_id = s.id
+        LEFT JOIN users b ON t.buyer_id = b.id
+        WHERE (t.seller_id = ? OR t.buyer_id = ?)
+          AND EXISTS (SELECT 1 FROM chat_messages WHERE trade_id = t.id)
+        ORDER BY last_message_at DESC, t.id DESC
+     with params: ["3","3","3"]
+2025-10-04 => 📝[LOG]📝 Fetching trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT id, seller_id, buyer_id, status 
+        FROM trades 
+        WHERE seller_id = ? OR buyer_id = ?
+     with params: ["4","4"]
+2025-10-04 => 📝[LOG]📝 Trades for user 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":null,"status":"open"}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT trade_id, COUNT(*) as msg_count 
+        FROM chat_messages 
+        GROUP BY trade_id
+     with params: []
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:[{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":4}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT 
+            t.id, t.asset, t.amount, t.status,
+            t.seller_id, t.buyer_id,
+            s.username AS seller_name,
+            b.username AS buyer_name,
+            CASE 
+                WHEN t.seller_id = ? THEN COALESCE(b.username, 'No Buyer')
+                ELSE s.username
+            END AS counterparty_name,
+            (SELECT COUNT(*) FROM chat_messages WHERE trade_id = t.id) as message_count,
+            (SELECT MAX(created_at) FROM chat_messages WHERE trade_id = t.id) as last_message_at
+        FROM trades t
+        JOIN users s ON t.seller_id = s.id
+        LEFT JOIN users b ON t.buyer_id = b.id
+        WHERE (t.seller_id = ? OR t.buyer_id = ?)
+          AND EXISTS (SELECT 1 FROM chat_messages WHERE trade_id = t.id)
+        ORDER BY last_message_at DESC, t.id DESC
+     with params: ["4","4","4"]
+2025-10-04 => 📝[LOG]📝 Buyer taking trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching trade: 24
+2025-10-04 => 📝[LOG]📝 Releasing trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching trade: 24
+2025-10-04 => 📝[LOG]📝 Cancelling trade: 24
+2025-10-04 => 📝[LOG]📝 Error cancelling trade: Trade cannot be cancelled in its current state
+2025-10-04 => 📝[LOG]📝 Fetching trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 3
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT id, seller_id, buyer_id, status 
+        FROM trades 
+        WHERE seller_id = ? OR buyer_id = ?
+     with params: ["3","3"]
+2025-10-04 => 📝[LOG]📝 Trades for user 3:[{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT trade_id, COUNT(*) as msg_count 
+        FROM chat_messages 
+        GROUP BY trade_id
+     with params: []
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:[{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":4}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT 
+            t.id, t.asset, t.amount, t.status,
+            t.seller_id, t.buyer_id,
+            s.username AS seller_name,
+            b.username AS buyer_name,
+            CASE 
+                WHEN t.seller_id = ? THEN COALESCE(b.username, 'No Buyer')
+                ELSE s.username
+            END AS counterparty_name,
+            (SELECT COUNT(*) FROM chat_messages WHERE trade_id = t.id) as message_count,
+            (SELECT MAX(created_at) FROM chat_messages WHERE trade_id = t.id) as last_message_at
+        FROM trades t
+        JOIN users s ON t.seller_id = s.id
+        LEFT JOIN users b ON t.buyer_id = b.id
+        WHERE (t.seller_id = ? OR t.buyer_id = ?)
+          AND EXISTS (SELECT 1 FROM chat_messages WHERE trade_id = t.id)
+        ORDER BY last_message_at DESC, t.id DESC
+     with params: ["3","3","3"]
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 3
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT id, seller_id, buyer_id, status 
+        FROM trades 
+        WHERE seller_id = ? OR buyer_id = ?
+     with params: ["3","3"]
+2025-10-04 => 📝[LOG]📝 Trades for user 3:[{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT trade_id, COUNT(*) as msg_count 
+        FROM chat_messages 
+        GROUP BY trade_id
+     with params: []
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:[{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":4}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT 
+            t.id, t.asset, t.amount, t.status,
+            t.seller_id, t.buyer_id,
+            s.username AS seller_name,
+            b.username AS buyer_name,
+            CASE 
+                WHEN t.seller_id = ? THEN COALESCE(b.username, 'No Buyer')
+                ELSE s.username
+            END AS counterparty_name,
+            (SELECT COUNT(*) FROM chat_messages WHERE trade_id = t.id) as message_count,
+            (SELECT MAX(created_at) FROM chat_messages WHERE trade_id = t.id) as last_message_at
+        FROM trades t
+        JOIN users s ON t.seller_id = s.id
+        LEFT JOIN users b ON t.buyer_id = b.id
+        WHERE (t.seller_id = ? OR t.buyer_id = ?)
+          AND EXISTS (SELECT 1 FROM chat_messages WHERE trade_id = t.id)
+        ORDER BY last_message_at DESC, t.id DESC
+     with params: ["3","3","3"]
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 3
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT id, seller_id, buyer_id, status 
+        FROM trades 
+        WHERE seller_id = ? OR buyer_id = ?
+     with params: ["3","3"]
+2025-10-04 => 📝[LOG]📝 Trades for user 3:[{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT trade_id, COUNT(*) as msg_count 
+        FROM chat_messages 
+        GROUP BY trade_id
+     with params: []
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:[{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":4}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT 
+            t.id, t.asset, t.amount, t.status,
+            t.seller_id, t.buyer_id,
+            s.username AS seller_name,
+            b.username AS buyer_name,
+            CASE 
+                WHEN t.seller_id = ? THEN COALESCE(b.username, 'No Buyer')
+                ELSE s.username
+            END AS counterparty_name,
+            (SELECT COUNT(*) FROM chat_messages WHERE trade_id = t.id) as message_count,
+            (SELECT MAX(created_at) FROM chat_messages WHERE trade_id = t.id) as last_message_at
+        FROM trades t
+        JOIN users s ON t.seller_id = s.id
+        LEFT JOIN users b ON t.buyer_id = b.id
+        WHERE (t.seller_id = ? OR t.buyer_id = ?)
+          AND EXISTS (SELECT 1 FROM chat_messages WHERE trade_id = t.id)
+        ORDER BY last_message_at DESC, t.id DESC
+     with params: ["3","3","3"]
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 3
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT id, seller_id, buyer_id, status 
+        FROM trades 
+        WHERE seller_id = ? OR buyer_id = ?
+     with params: ["3","3"]
+2025-10-04 => 📝[LOG]📝 Trades for user 3:[{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT trade_id, COUNT(*) as msg_count 
+        FROM chat_messages 
+        GROUP BY trade_id
+     with params: []
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:[{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":4}]
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+        SELECT 
+            t.id, t.asset, t.amount, t.status,
+            t.seller_id, t.buyer_id,
+            s.username AS seller_name,
+            b.username AS buyer_name,
+            CASE 
+                WHEN t.seller_id = ? THEN COALESCE(b.username, 'No Buyer')
+                ELSE s.username
+            END AS counterparty_name,
+            (SELECT COUNT(*) FROM chat_messages WHERE trade_id = t.id) as message_count,
+            (SELECT MAX(created_at) FROM chat_messages WHERE trade_id = t.id) as last_message_at
+        FROM trades t
+        JOIN users s ON t.seller_id = s.id
+        LEFT JOIN users b ON t.buyer_id = b.id
+        WHERE (t.seller_id = ? OR t.buyer_id = ?)
+          AND EXISTS (SELECT 1 FROM chat_messages WHERE trade_id = t.id)
+        ORDER BY last_message_at DESC, t.id DESC
+     with params: ["3","3","3"]
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Executing SQL: 
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            ORDER BY t.id DESC
+         with params: []
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 3
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 3:[{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":4}]
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 3
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 3:[{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":4}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":5}]
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 4
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 4:[{"id":23,"seller_id":4,"buyer_id":null,"status":"open"},{"id":24,"seller_id":4,"buyer_id":3,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching messages for trade: 24
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 2
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 2:[{"id":12,"seller_id":1,"buyer_id":2,"status":"in_progress"},{"id":13,"seller_id":1,"buyer_id":2,"status":"completed"},{"id":14,"seller_id":1,"buyer_id":2,"status":"cancelled"},{"id":16,"seller_id":1,"buyer_id":2,"status":"in_progress"},{"id":18,"seller_id":1,"buyer_id":2,"status":"completed"},{"id":19,"seller_id":1,"buyer_id":2,"status":"in_progress"},{"id":20,"seller_id":1,"buyer_id":2,"status":"cancelled"},{"id":22,"seller_id":2,"buyer_id":1,"status":"completed"}]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 creating user: try
+2025-10-04 => 📝[LOG]📝 creating user: try
+2025-10-04 => 📝[LOG]📝 User registered successfully: 5
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 5
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 5:[]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 creating user: ziup
+2025-10-04 => 📝[LOG]📝 creating user: ziup
+2025-10-04 => 📝[LOG]📝 User registered successfully: 6
+2025-10-04 => 📝[LOG]📝 Fetching all trades
+2025-10-04 => 📝[LOG]📝 Fetching chats for user: 6
+2025-10-04 => 📝[LOG]📝 Trades for user ======> 6:[]
+2025-10-04 => 📝[LOG]📝 Chat messages per trade:========> [{"trade_id":22,"msg_count":1},{"trade_id":24,"msg_count":6}]

@@ -2,68 +2,105 @@
 use App\Controllers\UserController;
 use App\Controllers\TradeController;
 
-
-Flight::route('GET /trades', function() {
-    Flight::json(TradeController::index());
+// Welcome route
+Flight::route('/', function () {
+    Flight::json([
+        'success' => true,
+        'message' => 'Welcome to the P2P Trading API',
+        'data' => [
+            'version' => '1.0',
+            'endpoints' => [
+                'GET /trades' => 'Get all trades',
+                'GET /trades/:id' => 'Get a specific trade',
+                'POST /trades' => 'Create a new trade',
+                'PUT /trades/:id' => 'Update trade status',
+                'DELETE /trades/:id' => 'Delete a trade',
+                'POST /trades/:id/buy' => 'Buy a trade',
+                'POST /trades/:id/release' => 'Release a trade',
+                'POST /trades/:id/cancel' => 'Cancel a trade',
+                'GET /trades/user/:id/chats' => 'Get user chats',
+                'POST /register' => 'Register a new user',
+                'POST /login' => 'Login user'
+            ]
+        ]
+    ]);
 });
 
-Flight::route('GET /trades/@id', function($id) {
-    Flight::json(TradeController::show($id));
+// Trade routes
+Flight::route('GET /trades', function () {
+    $response = TradeController::index();
+    Flight::json($response);
 });
 
-Flight::route('POST /trades', function() {
+Flight::route('GET /trades/@id', function ($id) {
+    $response = TradeController::show($id);
+    Flight::json($response);
+});
+
+Flight::route('GET /trades/user/@id/chats', function ($id) {
+    $response = TradeController::getUserChats($id);
+    Flight::json($response);
+});
+
+Flight::route('GET /trades/@id/messages', function ($id) {
+    $response = TradeController::getTradeMessages($id);
+    Flight::json($response);
+});
+
+Flight::route('POST /trades', function () {
     $data = Flight::request()->data->getData();
-    $id = TradeController::store($data);
-    Flight::json(["message" => "Trade created", "id" => $id]);
+    $response = TradeController::store($data);
+    Flight::json($response);
 });
 
-Flight::route('PUT /trades/@id', function($id) {
+Flight::route('PUT /trades/@id', function ($id) {
     $data = Flight::request()->data->getData();
-    TradeController::update($id, $data);
-    Flight::json(["message" => "Trade updated"]);
+    $response = TradeController::update($id, $data);
+    Flight::json($response);
 });
 
-Flight::route('DELETE /trades/@id', function($id) {
-    TradeController::destroy($id);
-    Flight::json(["message" => "Trade deleted"]);
+Flight::route('DELETE /trades/@id', function ($id) {
+    $response = TradeController::destroy($id);
+    Flight::json($response);
 });
 
-
-// User register
-Flight::route('POST /register', function() {
+// Trade action routes
+Flight::route('POST /trades/@id/buy', function ($id) {
     $data = Flight::request()->data->getData();
-    $res = UserController::register($data);
-    Flight::json($res);
+    $response = TradeController::buy($id, $data);
+    Flight::json($response);
 });
 
-// User login
-Flight::route('POST /login', function() {
+Flight::route('POST /trades/@id/release', function ($id) {
     $data = Flight::request()->data->getData();
-    $res = UserController::login($data);
-    Flight::json($res);
+    $response = TradeController::release($id, $data);
+    Flight::json($response);
 });
 
-// Buyer joins a trade
-Flight::route('POST /trades/@id/buy', function($id) {
+Flight::route('POST /trades/@id/cancel', function ($id) {
     $data = Flight::request()->data->getData();
-    $res = TradeController::buy($id, $data);
-    Flight::json($res);
+    $response = TradeController::cancel($id, $data);
+    Flight::json($response);
 });
 
-// Seller releases a trade
-Flight::route('POST /trades/@id/release', function($id) {
+// Authentication routes
+Flight::route('POST /register', function () {
     $data = Flight::request()->data->getData();
-    $res = TradeController::release($id, $data);
-    Flight::json($res);
+    $response = UserController::register($data);
+    Flight::json($response);
 });
 
-// Cancel a trade
-Flight::route('POST /trades/@id/cancel', function($id) {
+Flight::route('POST /login', function () {
     $data = Flight::request()->data->getData();
-    $res = TradeController::cancel($id, $data);
-    Flight::json($res);
+    $response = UserController::login($data);
+    Flight::json($response);
 });
 
-Flight::route('/', function(){
-    echo 'Welcome to the P2P Trading API';
+// 404 handler
+Flight::map('notFound', function () {
+    Flight::json([
+        'success' => false,
+        'message' => 'Route not found',
+        'data' => null
+    ], 404);
 });
