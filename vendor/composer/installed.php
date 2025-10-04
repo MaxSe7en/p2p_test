@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'p2p/escrow-system',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'ed7ee858a7743d6ffacabf28a0b4d3436b18175c',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -74,9 +74,9 @@
             'dev_requirement' => true,
         ),
         'p2p/escrow-system' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'ed7ee858a7743d6ffacabf28a0b4d3436b18175c',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

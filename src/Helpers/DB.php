@@ -11,7 +11,7 @@ class DB
     public static function connect()
     {
         if (!self::$pdo) {
-            $config = require __DIR__ . '/../config/config.php';
+            $config = require __DIR__ . '/../Config/config.php';
             $dsn = "mysql:host={$config['host']};dbname={$config['dbname']};charset=utf8mb4";
 
             $options = [
