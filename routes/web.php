@@ -83,6 +83,12 @@ Flight::route('POST /trades/@id/cancel', function ($id) {
     Flight::json($response);
 });
 
+// Wallet route
+Flight::route('GET /users/@id/wallets', function ($id) {
+    $response = UserController::getWallets($id);
+    Flight::json($response);
+});
+
 // Authentication routes
 Flight::route('POST /register', function () {
     $data = Flight::request()->data->getData();

@@ -42,41 +42,40 @@ class Trade
     public static function getUserChats($userId): array
     {
         $dTrades = DB::selectAll("
-        SELECT id, seller_id, buyer_id, status 
-        FROM trades 
-        WHERE seller_id = ? OR buyer_id = ?
-    ", [$userId, $userId]);
+            SELECT id, seller_id, buyer_id, status 
+            FROM trades 
+            WHERE seller_id = ? OR buyer_id = ?
+        ", [$userId, $userId]);
 
         Console::log2("Trades for user ======> $userId:", $dTrades);
 
         $dChats = DB::selectAll("
-        SELECT trade_id, COUNT(*) as msg_count 
-        FROM chat_messages 
-        GROUP BY trade_id
-    ");
+            SELECT trade_id, COUNT(*) as msg_count 
+            FROM chat_messages 
+            GROUP BY trade_id
+        ");
 
         Console::log2("Chat messages per trade:========> ", $dChats);
 
-        // Then run the actual query
         return DB::selectAll("
-        SELECT 
-            t.id, t.asset, t.amount, t.status,
-            t.seller_id, t.buyer_id,
-            s.username AS seller_name,
-            b.username AS buyer_name,
-            CASE 
-                WHEN t.seller_id = ? THEN COALESCE(b.username, 'No Buyer')
-                ELSE s.username
-            END AS counterparty_name,
-            (SELECT COUNT(*) FROM chat_messages WHERE trade_id = t.id) as message_count,
-            (SELECT MAX(created_at) FROM chat_messages WHERE trade_id = t.id) as last_message_at
-        FROM trades t
-        JOIN users s ON t.seller_id = s.id
-        LEFT JOIN users b ON t.buyer_id = b.id
-        WHERE (t.seller_id = ? OR t.buyer_id = ?)
-          AND EXISTS (SELECT 1 FROM chat_messages WHERE trade_id = t.id)
-        ORDER BY last_message_at DESC, t.id DESC
-    ", [$userId, $userId, $userId]);
+            SELECT 
+                t.id, t.asset, t.amount, t.status,
+                t.seller_id, t.buyer_id,
+                s.username AS seller_name,
+                b.username AS buyer_name,
+                CASE 
+                    WHEN t.seller_id = ? THEN COALESCE(b.username, 'No Buyer')
+                    ELSE s.username
+                END AS counterparty_name,
+                (SELECT COUNT(*) FROM chat_messages WHERE trade_id = t.id) as message_count,
+                (SELECT MAX(created_at) FROM chat_messages WHERE trade_id = t.id) as last_message_at
+            FROM trades t
+            JOIN users s ON t.seller_id = s.id
+            LEFT JOIN users b ON t.buyer_id = b.id
+            WHERE (t.seller_id = ? OR t.buyer_id = ?)
+            AND EXISTS (SELECT 1 FROM chat_messages WHERE trade_id = t.id)
+            ORDER BY last_message_at DESC, t.id DESC
+        ", [$userId, $userId, $userId]);
     }
 
     public static function getTradeMessages($tradeId): array
@@ -270,7 +269,6 @@ class Trade
                     [$trade['amount'], $trade['amount'], $userId, $trade['asset']]
                 );
 
-                // Log unlock transaction
                 DB::insert(
                     "INSERT INTO transactions (user_id, asset, amount, type, trade_id) 
                      VALUES (?, ?, ?, 'unlock', ?)",

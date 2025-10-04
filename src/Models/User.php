@@ -9,7 +9,6 @@ class User
 {
     public static function create($username, $password): bool|string
     {
-        // Basic validations
         Console::log2("creating user: ", $username);
         if (strlen($username) < 3) {
             throw new Exception("Username must be at least 3 characters long.");
@@ -20,19 +19,16 @@ class User
         }
         Console::log2("creating user: ", $username);
 
-        // Check if username already exists
         $existing = DB::select("SELECT id FROM users WHERE username = ?", [$username]);
         if ($existing) {
             throw new Exception("Username already taken.");
         }
 
-        // Hash password
         $hashed = password_hash($password, PASSWORD_BCRYPT);
 
         $db = DB::connect();
         $db->beginTransaction();
         try {
-            // Insert user
             $userId = DB::insert(
                 "INSERT INTO users (username, password) VALUES (?, ?)",
                 [$username, $hashed]
@@ -58,7 +54,6 @@ class User
                     [$userId, $asset, $amount]
                 );
 
-                // Log initial deposit transaction
                 DB::insert(
                     "INSERT INTO transactions (user_id, asset, amount, type) VALUES (?, ?, ?, 'deposit')",
                     [$userId, $asset, $amount]
@@ -97,6 +92,26 @@ class User
             return $user;
         }
         return false;
+    }
+
+    public static function getWallets($userId): array
+    {
+        Console::log2("Fetching wallets for user ID: ", $userId);
+
+        $wallets = DB::selectAll(
+            "SELECT 
+            asset, 
+            balance, 
+            locked_balance as locked
+         FROM wallets 
+         WHERE user_id = ? 
+         ORDER BY asset ASC",
+            [$userId]
+        );
+
+        Console::log2("Found wallets=========>  ", count($wallets));
+
+        return $wallets;
     }
 }
 
