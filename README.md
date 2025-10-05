@@ -1,21 +1,32 @@
-# 📖 P2P Escrow Trading System – API Documentation
+# P2P Escrow Trading System - API Documentation
 
-Base URL:
+## Base URL
+```
+[http://localhost:8000](https://alphaseven.online/p2p_test/)
+```
 
+## WebSocket Server
 ```
-http://localhost:8000
+[ws://localhost:8080](wss://alphaseven.online/ws/)
 ```
+
+---
+
+## 📋 Table of Contents
+- [Authentication](#authentication)
+- [Trades](#trades)
+- [User Management](#user-management)
+- [Chat System](#chat-system)
+- [WebSocket Chat](#websocket-chat)
 
 ---
 
 ## 🔐 Authentication
 
 ### Register User
-
 **POST** `/register`
 
-**Request Body**
-
+**Request Body:**
 ```json
 {
   "username": "alice",
@@ -23,23 +34,21 @@ http://localhost:8000
 }
 ```
 
-**Response**
-
+**Response:**
 ```json
 {
+  "success": true,
   "message": "User registered successfully",
-  "id": 1
+  "data": {
+    "id": 1
+  }
 }
 ```
-
----
 
 ### Login User
-
 **POST** `/login`
 
-**Request Body**
-
+**Request Body:**
 ```json
 {
   "username": "alice",
@@ -47,16 +56,22 @@ http://localhost:8000
 }
 ```
 
-**Response**
-
+**Response:**
 ```json
 {
+  "success": true,
   "message": "Login successful",
-  "user": {
+  "data": {
     "id": 1,
     "username": "alice",
-    "password": "...hashed...",
-    "created_at": "2025-10-02 12:00:00"
+    "created_at": "2025-10-02 12:00:00",
+    "wallets": [
+      {
+        "asset": "USD",
+        "balance": "100000.00000000",
+        "locked_balance": "0.00000000"
+      }
+    ]
   }
 }
 ```
@@ -66,51 +81,53 @@ http://localhost:8000
 ## 📦 Trades
 
 ### List All Trades
-
 **GET** `/trades`
 
-**Response**
-
-```json
-[
-  {
-    "id": 1,
-    "asset": "BTC",
-    "amount": "100.00",
-    "status": "open",
-    "seller_name": "alice",
-    "buyer_name": null
-  }
-]
-```
-
----
-
-### Get Single Trade
-
-**GET** `/trades/{id}`
-
-**Response**
-
+**Response:**
 ```json
 {
-  "id": 1,
-  "asset": "BTC",
-  "amount": "100.00",
-  "status": "in_progress",
-  "seller_name": "alice",
-  "buyer_name": "bob"
+  "success": true,
+  "message": null,
+  "data": [
+    {
+      "id": 1,
+      "asset": "BTC",
+      "amount": "100.00",
+      "status": "open",
+      "seller_id": 1,
+      "buyer_id": null,
+      "seller_name": "alice",
+      "buyer_name": null
+    }
+  ]
 }
 ```
 
----
+### Get Single Trade
+**GET** `/trades/{id}`
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "id": 1,
+    "asset": "BTC",
+    "amount": "100.00",
+    "status": "in_progress",
+    "seller_id": 1,
+    "buyer_id": 2,
+    "seller_name": "alice",
+    "buyer_name": "bob"
+  }
+}
+```
 
 ### Create Trade
-
 **POST** `/trades`
 
-**Request Body**
-
+**Request Body:**
 ```json
 {
   "seller_id": 1,
@@ -119,99 +136,146 @@ http://localhost:8000
 }
 ```
 
-**Response**
-
+**Response:**
 ```json
 {
-  "message": "Trade created",
-  "id": 1
+  "success": true,
+  "message": "Trade created successfully",
+  "data": {
+    "id": 1,
+    "asset": "BTC",
+    "amount": "100.00",
+    "status": "open",
+    "seller_id": 1,
+    "buyer_id": null,
+    "seller_name": "alice",
+    "buyer_name": null
+  }
+}
+```
+
+### Update Trade Status
+**PUT** `/trades/{id}`
+
+**Request Body:**
+```json
+{
+  "status": "completed"
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Trade status updated successfully",
+  "data": {
+    "id": 1,
+    "asset": "BTC",
+    "amount": "100.00",
+    "status": "completed",
+    "seller_id": 1,
+    "buyer_id": 2,
+    "seller_name": "alice",
+    "buyer_name": "bob"
+  }
+}
+```
+
+### Delete Trade
+**DELETE** `/trades/{id}`
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Trade deleted successfully",
+  "data": null
 }
 ```
 
 ---
 
-### Buy Trade
+## 🛒 Trade Actions
 
+### Buy Trade
 **POST** `/trades/{id}/buy`
 
-**Request Body**
-
+**Request Body:**
 ```json
 {
   "buyer_id": 2
 }
 ```
 
-**Response**
-
+**Response:**
 ```json
 {
-  "message": "Trade taken by buyer",
-  "trade": {
+  "success": true,
+  "message": "Trade taken successfully",
+  "data": {
     "id": 1,
     "asset": "BTC",
     "amount": "100.00",
     "status": "in_progress",
+    "seller_id": 1,
+    "buyer_id": 2,
     "seller_name": "alice",
     "buyer_name": "bob"
   }
 }
 ```
 
----
-
 ### Release Trade
-
 **POST** `/trades/{id}/release`
 
-**Request Body**
-
+**Request Body:**
 ```json
 {
   "seller_id": 1
 }
 ```
 
-**Response**
-
+**Response:**
 ```json
 {
-  "message": "Trade released to buyer",
-  "trade": {
+  "success": true,
+  "message": "Trade released successfully",
+  "data": {
     "id": 1,
     "asset": "BTC",
     "amount": "100.00",
     "status": "completed",
+    "seller_id": 1,
+    "buyer_id": 2,
     "seller_name": "alice",
     "buyer_name": "bob"
   }
 }
 ```
 
----
-
 ### Cancel Trade
-
 **POST** `/trades/{id}/cancel`
 
-**Request Body**
-
+**Request Body:**
 ```json
 {
   "user_id": 2
 }
 ```
 
-**Response**
-
+**Response:**
 ```json
 {
-  "message": "Trade cancelled",
-  "trade": {
+  "success": true,
+  "message": "Trade cancelled successfully",
+  "data": {
     "id": 1,
     "asset": "BTC",
     "amount": "100.00",
     "status": "cancelled",
+    "seller_id": 1,
+    "buyer_id": 2,
     "seller_name": "alice",
     "buyer_name": "bob"
   }
@@ -220,69 +284,97 @@ http://localhost:8000
 
 ---
 
-## 💬 Chat (REST API)
+## 👤 User Management
 
-### Send Message
+### Get User Wallets
+**GET** `/users/{id}/wallets`
 
-**POST** `/trades/{id}/messages`
-
-**Request Body**
-
+**Response:**
 ```json
 {
-  "sender_id": 2,
-  "message": "Hello, I am ready to pay"
+  "success": true,
+  "message": "Wallets retrieved successfully",
+  "data": [
+    {
+      "asset": "USD",
+      "balance": "100000.00000000",
+      "locked": "0.00000000"
+    },
+    {
+      "asset": "BTC",
+      "balance": "100.00000000",
+      "locked": "0.00000000"
+    }
+  ]
 }
 ```
 
-**Response**
+### Get User Chats
+**GET** `/trades/user/{id}/chats`
 
+**Response:**
 ```json
 {
-  "message": "Message sent",
-  "id": 1
+  "success": true,
+  "message": null,
+  "data": [
+    {
+      "id": 1,
+      "asset": "BTC",
+      "amount": "100.00",
+      "status": "in_progress",
+      "seller_id": 1,
+      "buyer_id": 2,
+      "seller_name": "alice",
+      "buyer_name": "bob",
+      "counterparty_name": "bob",
+      "message_count": 5,
+      "last_message_at": "2025-10-02 12:05:00"
+    }
+  ]
 }
 ```
 
 ---
 
-### Fetch Messages
+## 💬 Chat System (REST API)
 
+### Get Trade Messages
 **GET** `/trades/{id}/messages`
 
-**Response**
-
+**Response:**
 ```json
-[
-  {
-    "id": 1,
-    "message": "Hello, I am ready to pay",
-    "created_at": "2025-10-02 12:00:00",
-    "sender_name": "bob"
-  },
-  {
-    "id": 2,
-    "message": "Okay, please proceed",
-    "created_at": "2025-10-02 12:01:00",
-    "sender_name": "alice"
-  }
-]
+{
+  "success": true,
+  "message": "Messages retrieved successfully",
+  "data": [
+    {
+      "id": 1,
+      "sender_id": 2,
+      "sender_name": "bob",
+      "message": "Hello, I am ready to pay",
+      "created_at": "2025-10-02 12:00:00"
+    },
+    {
+      "id": 2,
+      "sender_id": 1,
+      "sender_name": "alice",
+      "message": "Okay, please proceed",
+      "created_at": "2025-10-02 12:01:00"
+    }
+  ]
+}
 ```
 
 ---
 
-## ⚡ Chat (WebSocket)
+## ⚡ WebSocket Chat
 
-**Server URL**:
+### Connection
+**URL:** `ws://[localhost:8080](ws://alphaseven.online/ws/)`
 
-```
-ws://localhost:8080
-```
-
-### Join a Trade Chat
-
-Send:
-
+### Join Trade Chat
+**Send:**
 ```json
 {
   "action": "join",
@@ -291,8 +383,7 @@ Send:
 }
 ```
 
-Response:
-
+**Response:**
 ```json
 {
   "action": "joined",
@@ -300,12 +391,8 @@ Response:
 }
 ```
 
----
-
-### Send a Message
-
-Send:
-
+### Send Message
+**Send:**
 ```json
 {
   "action": "message",
@@ -313,8 +400,7 @@ Send:
 }
 ```
 
-Broadcasted to all clients in the room:
-
+**Broadcasted to all clients in the room:**
 ```json
 {
   "action": "message",
@@ -327,12 +413,8 @@ Broadcasted to all clients in the room:
 }
 ```
 
----
-
 ### Leave Trade Chat
-
-Send:
-
+**Send:**
 ```json
 {
   "action": "leave",
@@ -340,11 +422,65 @@ Send:
 }
 ```
 
-Response:
-
+**Response:**
 ```json
 {
   "action": "left",
   "trade_id": 1
 }
 ```
+
+---
+
+## 📊 Trade Status Reference
+
+| Status | Description |
+|--------|-------------|
+| `open` | Trade is available for purchase |
+| `in_progress` | Trade has been bought, awaiting completion |
+| `completed` | Trade has been successfully completed |
+| `cancelled` | Trade has been cancelled |
+
+---
+
+## 🎯 Error Responses
+
+All endpoints follow a consistent error format:
+
+```json
+{
+  "success": false,
+  "message": "Error description",
+  "data": null
+}
+```
+
+**Common HTTP Status Codes:**
+- `200` - Success
+- `400` - Bad Request
+- `401` - Unauthorized
+- `403` - Forbidden
+- `404` - Not Found
+- `422` - Validation Error
+- `500` - Internal Server Error
+
+---
+
+## 🚀 Quick Start
+
+1. **Start the Web Server:**
+   ```bash
+   php -S localhost:8000
+   ```
+
+2. **Start the WebSocket Server:**
+   ```bash
+   php services/web_socket.php
+   ```
+
+3. **Test the API:**
+   ```bash
+   curl -X GET [http://localhost:8000](https://alphaseven.online/p2p_test/)/trades
+   ```
+
+---
